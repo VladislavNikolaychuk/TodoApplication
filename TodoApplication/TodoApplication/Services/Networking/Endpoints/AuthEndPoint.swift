@@ -23,7 +23,7 @@ extension AuthEndpoint: EndPointType {
     var path: String {
         switch self {
         case .login:
-            return "auth"
+            return "login/"
         case .signUp:
             return "register/"
         }

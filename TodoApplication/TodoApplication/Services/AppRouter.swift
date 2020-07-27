@@ -16,9 +16,8 @@ final class AppRouter {
     
     static func runAuthFlow() {
         AuthManager.shared.logout()
-        let mainController = SignUpConfigurator.createSignUpRouterModule()
+        let mainController = LoginConfigurator.createLoginRouterModule()
         let navigation = UINavigationController(rootViewController: mainController)
-        navigation.isNavigationBarHidden = true
         changeFlowTo(controller: navigation)
     }
     
@@ -47,5 +46,4 @@ final class AppRouter {
         window?.rootViewController = controller
         runFadeAnimationForWindow(window)
     }
-
 }

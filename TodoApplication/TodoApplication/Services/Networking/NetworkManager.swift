@@ -31,7 +31,12 @@ struct NetworkManager {
                 let apiResponse = try JSONDecoder().decode(responseType, from: responseData)
                 completion(apiResponse, nil)
             } catch {
-                 completion(nil, NetworkResponse.unableToDecode.error())
+                 do {
+                    let failResponse = try JSONDecoder().decode(DefaultFailResponse.self, from: responseData)
+                     completion(nil, failResponse.message)
+                 } catch {
+                      completion(nil, NetworkResponse.unableToDecode.error())
+                 }
             }
         case .failure(let networkFailureError):
             completion(nil, networkFailureError.description)

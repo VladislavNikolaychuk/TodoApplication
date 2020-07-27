@@ -1,33 +1,33 @@
 //
-//  SignUpPresenter.swift
+//  LoginPresenter.swift
 //  TodoApplication
 //
 //  Created by Vladislav Nikolaychuck on 27.07.2020.
 //  Copyright © 2020 Vladislav Nikolaychuck. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class SignUpPresenter: SignUpPresenterProtocol {
-    var router: SignUpRouterProtocol?
-    weak var view: SignUpViewProtocol?
-    var interactor: SignUpInteractorInputProtocol?
+class LoginPresenter: LoginPresenterProtocol {
     
-    func signUpWith(userName: String, password: String) {
+    weak var view: LoginViewProtocol?
+    var interactor: LoginInteractorInputProtocol?
+    var router: LoginRouterProtocol?
+    
+    func loginWith(userName: String, password: String) {
         let result = validateForm(userName: userName, password: password)
         if result.isValid {
-            interactor?.signUpWith(userName: userName, password: password)
+            interactor?.loginWith(userName: userName, password: password)
         } else {
             view?.showAlert(with: result.error ?? Text.smthWentWrong.localized)
         }
     }
     
-    func navigateToLoginViewController() {
+    func navigateToSignUpViewController() {
         guard let view = view else {
             return
         }
-        router?.navigateToLoginViewController(from: view)
+        router?.navigateToSignUpViewController(from: view)
     }
     
     private func validateForm(userName: String, password: String) -> (isValid: Bool, error: String?) {
@@ -51,14 +51,15 @@ class SignUpPresenter: SignUpPresenterProtocol {
     
 }
 
-extension SignUpPresenter: SignUpInteractorOutputProtocol {
+extension LoginPresenter: LoginInteractorOutputProtocol {
     
-    func signUpProccessSuccess() {
+    func loginProccessSuccess() {
         router?.navigateToMainApp()
     }
     
-    func signUpProccessFail(_ error: String) {
+    func loginProccessFail(_ error: String) {
         view?.showAlert(with: error)
     }
     
 }
+

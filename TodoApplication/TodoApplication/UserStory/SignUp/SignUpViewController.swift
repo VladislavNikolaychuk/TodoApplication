@@ -24,6 +24,7 @@ class SignUpViewController: BaseController {
         presenter?.signUpWith(userName: loginField.text ?? "",
                              password: passwordField.text ?? "")
     }
+    
     @IBAction func editingDidBegin(_ sender: Any) {
         loginField.setToValid()
         passwordField.setToValid()

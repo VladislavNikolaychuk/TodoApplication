@@ -1,5 +1,5 @@
 //
-//  SignUpInteractor.swift
+//  LoginInteractor.swift
 //  TodoApplication
 //
 //  Created by Vladislav Nikolaychuck on 27.07.2020.
@@ -8,26 +8,22 @@
 
 import Foundation
 
-class SignUpInteractor: SignUpInteractorInputProtocol {
+class LoginInteractor: LoginInteractorInputProtocol {
     
     private let networkManager = NetworkManager()
-    weak var presenter: SignUpInteractorOutputProtocol?
+    weak var presenter: LoginInteractorOutputProtocol?
+
     
-    func signUpWith(userName: String, password: String) {
-        print("sff\(userName)")
-        let request = AuthEndpoint.signUp(username: userName, password: password)
+    func loginWith(userName: String, password: String) {
+        let request = AuthEndpoint.login(username: userName, password: password)
         networkManager.fetch(endPoint: request, responseType: AuthResponse.self) { (result, error) in
             if let authCredentials = result,
                 AuthManager.shared.saveCredentials(authCredentials.token) {
-                print("authCredentials.token \(authCredentials.token)")
-                self.presenter?.signUpProccessSuccess()
+                self.presenter?.loginProccessSuccess()
             } else {
                 let error = error ?? Text.smthWentWrong.localized
-                self.presenter?.signUpProccessFail(error)
+                self.presenter?.loginProccessFail(error)
             }
-            
         }
-        
     }
-    
 }

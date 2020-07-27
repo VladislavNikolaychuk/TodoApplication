@@ -20,53 +20,55 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-AQ-Vnk">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-AQ-Vnk">
                     <rect key="frame" x="24" y="69" width="366" height="0.0"/>
                     <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fom-xc-6t3" customClass="TDField" customModule="TodoApplication" customModuleProvider="target">
-                    <rect key="frame" x="24" y="436" width="366" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="editingDidBegin:" destination="-1" eventType="editingDidBegin" id="IDf-1U-yQM"/>
-                    </connections>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vq-in-Qre" customClass="TDField" customModule="TodoApplication" customModuleProvider="target">
-                    <rect key="frame" x="24" y="490" width="366" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="editingDidBegin:" destination="-1" eventType="editingDidBegin" id="wEG-tF-yNo"/>
-                    </connections>
-                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hww-W1-lv6">
+                    <rect key="frame" x="24" y="89" width="366" height="88"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fom-xc-6t3" customClass="TDField" customModule="TodoApplication" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="editingDidBegin:" destination="-1" eventType="editingDidBegin" id="IDf-1U-yQM"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vq-in-Qre" customClass="TDField" customModule="TodoApplication" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="54" width="366" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="editingDidBegin:" destination="-1" eventType="editingDidBegin" id="wEG-tF-yNo"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1E0-Jn-n4H">
-                    <rect key="frame" x="24" y="554" width="366" height="60"/>
+                    <rect key="frame" x="24" y="782" width="366" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="gJ0-Xn-kIc"/>
                     </constraints>
-                    <state key="normal" title="Sign in"/>
+                    <state key="normal" title="Go"/>
                     <connections>
                         <action selector="signUpAction:" destination="-1" eventType="touchUpInside" id="Ht1-43-KNv"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fom-xc-6t3" secondAttribute="trailing" constant="24" id="8Jm-ST-IhG"/>
-                <constraint firstItem="fom-xc-6t3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Qz5-Kf-HS7"/>
-                <constraint firstItem="1E0-Jn-n4H" firstAttribute="top" secondItem="6vq-in-Qre" secondAttribute="bottom" constant="30" id="ZwV-1l-thW"/>
-                <constraint firstItem="6vq-in-Qre" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="cPT-aY-9ep"/>
-                <constraint firstItem="fom-xc-6t3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="edJ-g0-9OP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hww-W1-lv6" secondAttribute="trailing" constant="24" id="DRK-6w-LKo"/>
+                <constraint firstItem="hww-W1-lv6" firstAttribute="top" secondItem="ZhT-AQ-Vnk" secondAttribute="bottom" constant="20" id="H61-Z7-Zsf"/>
+                <constraint firstItem="1E0-Jn-n4H" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6vq-in-Qre" secondAttribute="bottom" constant="20" id="ZfY-ki-vJF"/>
+                <constraint firstItem="hww-W1-lv6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="ffD-K9-Hy9"/>
                 <constraint firstItem="ZhT-AQ-Vnk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="j5p-Mb-yhs"/>
                 <constraint firstItem="1E0-Jn-n4H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="jqI-XR-8wp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1E0-Jn-n4H" secondAttribute="trailing" constant="24" id="loM-di-jNY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZhT-AQ-Vnk" secondAttribute="trailing" constant="24" id="qP1-i0-EPc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6vq-in-Qre" secondAttribute="trailing" constant="24" id="st6-es-dqq"/>
-                <constraint firstItem="fom-xc-6t3" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="vrY-9v-e3d"/>
-                <constraint firstItem="6vq-in-Qre" firstAttribute="top" secondItem="fom-xc-6t3" secondAttribute="bottom" constant="20" id="we6-y2-423"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1E0-Jn-n4H" secondAttribute="bottom" constant="20" id="tB2-tj-S5a"/>
                 <constraint firstItem="ZhT-AQ-Vnk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="xc2-A3-zDZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
