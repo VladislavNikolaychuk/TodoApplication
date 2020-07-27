@@ -16,8 +16,15 @@ final class AppRouter {
     
     static func runAuthFlow() {
         AuthManager.shared.logout()
+        let mainController = SignUpConfigurator.createSignUpRouterModule()
+        let navigation = UINavigationController(rootViewController: mainController)
+        navigation.isNavigationBarHidden = true
+        changeFlowTo(controller: navigation)
+    }
+    
+    static func runMainFlow() {
         let mainController = UIViewController()
-        mainController.view.backgroundColor = UIColor.green
+        mainController.view.backgroundColor = .green
         let navigation = UINavigationController(rootViewController: mainController)
         navigation.isNavigationBarHidden = true
         changeFlowTo(controller: navigation)
