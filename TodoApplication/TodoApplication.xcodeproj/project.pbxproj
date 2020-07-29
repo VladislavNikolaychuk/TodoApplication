@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2706715024D17E74009C96C8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706714F24D17E74009C96C8 /* Product.swift */; };
+		2706715524D18D5F009C96C8 /* ProductCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706715424D18D5F009C96C8 /* ProductCollectionView.swift */; };
+		2706715E24D19381009C96C8 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706715D24D19381009C96C8 /* Segue.swift */; };
+		2706716124D19DF2009C96C8 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706715F24D19DF2009C96C8 /* ProductCell.swift */; };
+		2706716224D19DF2009C96C8 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2706716024D19DF2009C96C8 /* ProductCell.xib */; };
 		270E2C0C24CECE780065A400 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E2C0B24CECE780065A400 /* BaseController.swift */; };
 		270E2C1324CED17E0065A400 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E2C1124CED17E0065A400 /* SignUpViewController.swift */; };
 		270E2C1424CED17E0065A400 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E2C1224CED17E0065A400 /* SignUpViewController.xib */; };
@@ -42,10 +47,22 @@
 		272F3CCC24CAF2DF00189DDE /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F3CCB24CAF2DF00189DDE /* AuthManager.swift */; };
 		272F3CD024CAF39700189DDE /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272F3CCF24CAF39700189DDE /* Configurations.plist */; };
 		272F3CD324CAF40700189DDE /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F3CD224CAF40700189DDE /* Configurations.swift */; };
+		27A998D724D05D64005E3C8F /* ProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998D624D05D64005E3C8F /* ProductsInteractor.swift */; };
+		27A998D924D05D73005E3C8F /* ProductsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998D824D05D73005E3C8F /* ProductsPresenter.swift */; };
+		27A998DB24D05D8C005E3C8F /* ProductsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998DA24D05D8C005E3C8F /* ProductsProtocols.swift */; };
+		27A998DD24D05D9E005E3C8F /* ProductsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998DC24D05D9E005E3C8F /* ProductsRouter.swift */; };
+		27A998DF24D05DB5005E3C8F /* ProductsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998DE24D05DB5005E3C8F /* ProductsConfigurator.swift */; };
+		27A998E224D05DCB005E3C8F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A998E024D05DCB005E3C8F /* ProductsViewController.swift */; };
+		27A998E324D05DCB005E3C8F /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A998E124D05DCB005E3C8F /* ProductsViewController.xib */; };
 		B80217A86FEF8D9184FBD735 /* Pods_TodoApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4753162B7870643DE95BBDF /* Pods_TodoApplication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2706714F24D17E74009C96C8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2706715424D18D5F009C96C8 /* ProductCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionView.swift; sourceTree = "<group>"; };
+		2706715D24D19381009C96C8 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		2706715F24D19DF2009C96C8 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		2706716024D19DF2009C96C8 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		270E2C0B24CECE780065A400 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		270E2C1124CED17E0065A400 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		270E2C1224CED17E0065A400 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
@@ -83,6 +100,13 @@
 		272F3CCF24CAF39700189DDE /* Configurations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		272F3CD224CAF40700189DDE /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		272F3CD524CAF43B00189DDE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		27A998D624D05D64005E3C8F /* ProductsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInteractor.swift; sourceTree = "<group>"; };
+		27A998D824D05D73005E3C8F /* ProductsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPresenter.swift; sourceTree = "<group>"; };
+		27A998DA24D05D8C005E3C8F /* ProductsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsProtocols.swift; sourceTree = "<group>"; };
+		27A998DC24D05D9E005E3C8F /* ProductsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRouter.swift; sourceTree = "<group>"; };
+		27A998DE24D05DB5005E3C8F /* ProductsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsConfigurator.swift; sourceTree = "<group>"; };
+		27A998E024D05DCB005E3C8F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		27A998E124D05DCB005E3C8F /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
 		753F0B5217885189B1921981 /* Pods-TodoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApplication.debug.xcconfig"; path = "Target Support Files/Pods-TodoApplication/Pods-TodoApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		9C28FF29882F6E0F8B5D3EDF /* Pods-TodoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApplication.release.xcconfig"; path = "Target Support Files/Pods-TodoApplication/Pods-TodoApplication.release.xcconfig"; sourceTree = "<group>"; };
 		F4753162B7870643DE95BBDF /* Pods_TodoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +124,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2706715124D18682009C96C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2706714F24D17E74009C96C8 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2706715C24D1936E009C96C8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2706715D24D19381009C96C8 /* Segue.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		270E2C1F24CEDE4B0065A400 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +192,7 @@
 		272F3C9024CAF0A000189DDE /* TodoApplication */ = {
 			isa = PBXGroup;
 			children = (
+				2706715124D18682009C96C8 /* Models */,
 				272F3CC624CAF24300189DDE /* Library */,
 				272F3CC524CAF24000189DDE /* Extensions */,
 				272F3CC424CAF23D00189DDE /* Services */,
@@ -165,6 +206,7 @@
 		272F3CC124CAF22E00189DDE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2706715C24D1936E009C96C8 /* Helpers */,
 				272F3C9A24CAF0A500189DDE /* Assets.xcassets */,
 				272F3CD424CAF41200189DDE /* Translations */,
 				272F3CD124CAF3DE00189DDE /* Configurations */,
@@ -185,6 +227,7 @@
 		272F3CC324CAF23A00189DDE /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				27A998D524D05D41005E3C8F /* Products */,
 				270E2C4124CF0A340065A400 /* Login */,
 				272F3CCD24CAF33900189DDE /* SignUp */,
 			);
@@ -281,6 +324,23 @@
 			path = Translations;
 			sourceTree = "<group>";
 		};
+		27A998D524D05D41005E3C8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27A998D624D05D64005E3C8F /* ProductsInteractor.swift */,
+				27A998D824D05D73005E3C8F /* ProductsPresenter.swift */,
+				27A998DA24D05D8C005E3C8F /* ProductsProtocols.swift */,
+				27A998DC24D05D9E005E3C8F /* ProductsRouter.swift */,
+				27A998DE24D05DB5005E3C8F /* ProductsConfigurator.swift */,
+				27A998E024D05DCB005E3C8F /* ProductsViewController.swift */,
+				27A998E124D05DCB005E3C8F /* ProductsViewController.xib */,
+				2706715424D18D5F009C96C8 /* ProductCollectionView.swift */,
+				2706715F24D19DF2009C96C8 /* ProductCell.swift */,
+				2706716024D19DF2009C96C8 /* ProductCell.xib */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		C4E8CD207909F376C53B0290 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,9 +418,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2706716224D19DF2009C96C8 /* ProductCell.xib in Resources */,
 				270E2C4024CF06CB0065A400 /* Localizable.strings in Resources */,
 				272F3C9E24CAF0A500189DDE /* LaunchScreen.storyboard in Resources */,
 				270E2C5424CF0EF70065A400 /* LoginViewController.xib in Resources */,
+				27A998E324D05DCB005E3C8F /* ProductsViewController.xib in Resources */,
 				272F3CD024CAF39700189DDE /* Configurations.plist in Resources */,
 				270E2C1424CED17E0065A400 /* SignUpViewController.xib in Resources */,
 				272F3C9B24CAF0A500189DDE /* Assets.xcassets in Resources */,
@@ -420,12 +482,17 @@
 				270E2C3724CEE8840065A400 /* UITextField+Extensions.swift in Sources */,
 				270E2C1624CEDBBC0065A400 /* SignUpProtocols.swift in Sources */,
 				270E2C3224CEE5DA0065A400 /* Colors.swift in Sources */,
+				2706715E24D19381009C96C8 /* Segue.swift in Sources */,
 				270E2C1324CED17E0065A400 /* SignUpViewController.swift in Sources */,
 				270E2C4A24CF0BCD0065A400 /* LoginPresenter.swift in Sources */,
+				27A998D724D05D64005E3C8F /* ProductsInteractor.swift in Sources */,
 				270E2C2324CEDEDF0065A400 /* EndPointType.swift in Sources */,
 				270E2C1C24CEDD4E0065A400 /* NetworkManager.swift in Sources */,
+				27A998E224D05DCB005E3C8F /* ProductsViewController.swift in Sources */,
 				270E2C2524CEE0100065A400 /* AuthEndPoint.swift in Sources */,
+				27A998DF24D05DB5005E3C8F /* ProductsConfigurator.swift in Sources */,
 				272F3CD324CAF40700189DDE /* Configurations.swift in Sources */,
+				27A998DB24D05D8C005E3C8F /* ProductsProtocols.swift in Sources */,
 				270E2C4C24CF0BED0065A400 /* LoginProtocols.swift in Sources */,
 				270E2C3924CEEDB80065A400 /* SignUpConfigurator.swift in Sources */,
 				272F3CCC24CAF2DF00189DDE /* AuthManager.swift in Sources */,
@@ -433,6 +500,7 @@
 				270E2C3E24CEFB300065A400 /* SignUpRouter.swift in Sources */,
 				270E2C4E24CF0C060065A400 /* LoginRouter.swift in Sources */,
 				272F3C9224CAF0A000189DDE /* AppDelegate.swift in Sources */,
+				27A998D924D05D73005E3C8F /* ProductsPresenter.swift in Sources */,
 				270E2C0C24CECE780065A400 /* BaseController.swift in Sources */,
 				270E2C5624CF130D0065A400 /* LoginConfigurator.swift in Sources */,
 				270E2C1824CEDC200065A400 /* SignUpPresenter.swift in Sources */,
@@ -440,9 +508,13 @@
 				270E2C1A24CEDC7D0065A400 /* SignUpInteractor.swift in Sources */,
 				270E2C2B24CEE2420065A400 /* Validator.swift in Sources */,
 				272F3CC824CAF29F00189DDE /* AppRouter.swift in Sources */,
+				2706715024D17E74009C96C8 /* Product.swift in Sources */,
 				270E2C3524CEE8240065A400 /* TDField.swift in Sources */,
 				270E2C4824CF0BB40065A400 /* LoginInteractor.swift in Sources */,
+				2706715524D18D5F009C96C8 /* ProductCollectionView.swift in Sources */,
+				27A998DD24D05D9E005E3C8F /* ProductsRouter.swift in Sources */,
 				270E2C2724CEE0740065A400 /* AuthResponse.swift in Sources */,
+				2706716124D19DF2009C96C8 /* ProductCell.swift in Sources */,
 				270E2C2924CEE2160065A400 /* Localizable.swift in Sources */,
 				270E2C1E24CEDE130065A400 /* Result.swift in Sources */,
 			);

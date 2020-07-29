@@ -25,17 +25,4 @@ class SignUpRouter: SignUpRouterProtocol {
         viewController.navigationController?.pushViewController(controller, animated: true)
     }
     
-    static func createSignUpRouterModule() -> UIViewController {
-        let signUpController = SignUpViewController()
-        let presenter: SignUpPresenterProtocol & SignUpInteractorOutputProtocol = SignUpPresenter()
-        signUpController.presenter = presenter
-        presenter.view = signUpController
-        let interactor: SignUpInteractorInputProtocol = SignUpInteractor()
-        interactor.presenter = presenter
-        presenter.interactor = interactor
-        let router: SignUpRouterProtocol = SignUpRouter()
-        presenter.router = router
-        return signUpController
-    }
-    
 }

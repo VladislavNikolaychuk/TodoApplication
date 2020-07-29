@@ -13,7 +13,6 @@ class LoginInteractor: LoginInteractorInputProtocol {
     private let networkManager = NetworkManager()
     weak var presenter: LoginInteractorOutputProtocol?
 
-    
     func loginWith(userName: String, password: String) {
         let request = AuthEndpoint.login(username: userName, password: password)
         networkManager.fetch(endPoint: request, responseType: AuthResponse.self) { (result, error) in

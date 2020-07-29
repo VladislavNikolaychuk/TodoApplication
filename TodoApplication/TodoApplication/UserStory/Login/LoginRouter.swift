@@ -20,22 +20,9 @@ class LoginRouter: LoginRouterProtocol {
         guard let viewController = view as? UIViewController else {
             return
         }
-        let signUpController = SignUpRouter.createSignUpRouterModule()
+        let signUpController = SignUpConfigurator.createSignUpRouterModule()
         viewController.navigationController?.pushViewController(signUpController,
                                                                 animated: true)
-    }
-    
-    static func createLoginRouterModule() -> UIViewController {
-        let loginController = LoginViewController()
-        let presenter: LoginPresenterProtocol & LoginInteractorOutputProtocol = LoginPresenter()
-        loginController.presenter = presenter
-        presenter.view = loginController
-        let interactor: LoginInteractorInputProtocol = LoginInteractor()
-        interactor.presenter = presenter
-        presenter.interactor = interactor
-        let router: LoginRouterProtocol = LoginRouter()
-        presenter.router = router
-        return loginController
     }
     
 }
