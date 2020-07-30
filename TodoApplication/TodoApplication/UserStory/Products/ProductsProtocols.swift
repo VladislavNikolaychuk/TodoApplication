@@ -27,7 +27,7 @@ protocol ProductsPresenterProtocol: class {
     
     // VIEW -> PRESENTER
     func viewDidLoad()
-    func navigateToProductPreview()
+    func navigateToProductPreview(product: Product)
 }
 
 protocol ProductsInteractorInputProtocol: class {
@@ -48,6 +48,5 @@ protocol ProductsInteractorOutputProtocol: class {
 protocol ProductsRouterProtocol: class {
 
     // PRESENTER -> ROUTER
-    func navigateToProductController(from view: ProductsViewProtocol)
+    func openProductModule(from view: ProductsViewProtocol, product: Product)
 }
-

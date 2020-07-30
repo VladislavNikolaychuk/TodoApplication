@@ -11,7 +11,7 @@ import UIKit
 final class AppRouter {
     
     static func runOnLoadFlow() {
-        AppRouter.runMainFlow()
+        AppRouter.runAuthFlow()
     }
     
     static func runAuthFlow() {
@@ -24,7 +24,6 @@ final class AppRouter {
     static func runMainFlow() {
         let mainController = ProductsConfigurator.create()
         let navigation = UINavigationController(rootViewController: mainController)
-        navigation.isNavigationBarHidden = true
         changeFlowTo(controller: navigation)
     }
     

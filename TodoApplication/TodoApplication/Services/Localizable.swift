@@ -41,6 +41,7 @@ enum Text: String, Localizable {
     case Sorting
     case Saved
     case editSortingTitle
+    case products
     
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")

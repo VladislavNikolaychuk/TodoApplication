@@ -10,4 +10,5 @@ import Foundation
 
 enum CellID: String {
     case productCell
+    case reviewCell
 }

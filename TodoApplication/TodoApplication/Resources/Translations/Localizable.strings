@@ -29,6 +29,7 @@
 "edit" = "Edit";
 "editTitle" = "Edit Todo";
 "success" = "Success!";
-"Cancel" = "Cancel";
-"Logout" = "Logout";
-"Saved" = "Saved";
+"cancel" = "Cancel";
+"logout" = "Logout";
+"saved" = "Saved";
+"products" = "Products";

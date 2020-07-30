@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,7 +56,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="WqI-sK-TDs"/>
                             </constraints>
-                            <state key="normal" title="LOGIN"/>
+                            <state key="normal" title="LOGIN">
+                                <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
                                 <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="AN0-NE-9e7"/>
                             </connections>
@@ -65,7 +68,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="f3U-44-mHk"/>
                             </constraints>
-                            <state key="normal" title="SIGN-UP"/>
+                            <state key="normal" title="SIGN-UP">
+                                <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
                                 <action selector="signUpAction:" destination="-1" eventType="touchUpInside" id="z7E-3j-1su"/>
                             </connections>
@@ -73,7 +78,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
                 <constraint firstItem="D5w-rI-fFD" firstAttribute="top" secondItem="2lT-uP-UJx" secondAttribute="bottom" constant="20" id="3Zn-9x-4E0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YEg-Cw-BUg" secondAttribute="trailing" constant="24" id="63k-CI-bJP"/>
@@ -91,4 +96,9 @@
             <point key="canvasLocation" x="141" y="112"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.070588235289999995" green="0.078431372550000003" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

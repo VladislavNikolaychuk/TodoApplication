@@ -9,6 +9,7 @@
 import UIKit
 
 class ProductsViewController: BaseController, ProductsViewProtocol {
+    
     @IBOutlet weak var alert: UILabel!
     @IBOutlet weak var productsCollectionView: ProductCollectionView!
     var presenter: ProductsPresenterProtocol?
@@ -26,15 +27,19 @@ class ProductsViewController: BaseController, ProductsViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = Text.products.localized
         showLoader()
         presenter?.viewDidLoad()
         productsCollectionView.register(UINib(nibName: "ProductCell", bundle: nil),
                                     forCellWithReuseIdentifier: CellID.productCell.rawValue)
         productsCollectionView.dataSource = productsCollectionView
         productsCollectionView.delegate = productsCollectionView
+        productsCollectionView.productDidTap = { [weak self] product in
+            self?.presenter?.navigateToProductPreview(product: product)
+        }
         
     }
     @IBAction func logoutAction(_ sender: Any) {
-        print("tapped")
+        AppRouter.runAuthFlow()
     }
 }

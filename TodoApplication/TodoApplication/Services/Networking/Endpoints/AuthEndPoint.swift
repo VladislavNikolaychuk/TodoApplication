@@ -13,6 +13,7 @@ enum AuthEndpoint {
     case login(username: String, password: String)
     case signUp(username: String, password: String)
     case getProducts
+    case getReviews
 }
 
 extension AuthEndpoint: EndPointType {
@@ -20,6 +21,7 @@ extension AuthEndpoint: EndPointType {
     var baseURL: URL? {
         return URL(string: environmentBaseURL)
     }
+    
     
     var path: String {
         switch self {
@@ -29,6 +31,8 @@ extension AuthEndpoint: EndPointType {
             return "register/"
         case .getProducts:
             return "products/"
+        case .getReviews:
+            return "reviews/1"
         }
     }
     
@@ -39,6 +43,8 @@ extension AuthEndpoint: EndPointType {
         case .signUp:
             return .post
         case .getProducts:
+            return .get
+        case .getReviews:
             return .get
         }
     }
@@ -60,6 +66,8 @@ extension AuthEndpoint: EndPointType {
             return options
         case .getProducts:
             return nil
+        case .getReviews:
+            return nil
         }
     }
     
@@ -70,6 +78,8 @@ extension AuthEndpoint: EndPointType {
         case .signUp:
             return JSONEncoding.default
         case .getProducts:
+            return URLEncoding.default
+        case .getReviews:
             return URLEncoding.default
         }
     }

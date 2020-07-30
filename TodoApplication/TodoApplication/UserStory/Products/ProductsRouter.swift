@@ -6,10 +6,17 @@
 //  Copyright © 2020 Vladislav Nikolaychuck. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ProductsRouter: ProductsRouterProtocol {
-    func navigateToProductController(from view: ProductsViewProtocol) {
-        print("2422")
+    
+    func controller(view: ProductsViewProtocol) -> UIViewController? {
+        return view as? UIViewController
     }
+    
+    func openProductModule(from view: ProductsViewProtocol, product: Product) {
+        let module = ProductConfigurator.create(product: product)
+        controller(view: view)?.navigationController?.pushViewController(module, animated: true)
+    }
+    
 }

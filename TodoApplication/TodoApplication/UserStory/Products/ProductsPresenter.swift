@@ -19,9 +19,9 @@ class ProductsPresenter: ProductsPresenterProtocol {
         interactor?.fetchProducts()
     }
     
-    func navigateToProductPreview() {
+    func navigateToProductPreview(product: Product) {
         guard let view = view else { return }
-        router?.navigateToProductController(from: view)
+        router?.openProductModule(from: view, product: product)
     }
     
 }

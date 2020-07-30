@@ -10,6 +10,7 @@ import UIKit
 
 class ProductCollectionView: UICollectionView {
     var products: [Product] = []
+    var productDidTap: ((Product) -> Void)?
 }
 
 extension ProductCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -24,21 +25,23 @@ extension ProductCollectionView: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt
         indexPath: IndexPath) -> UICollectionViewCell {
         if let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID.productCell.rawValue, for: indexPath) as? ProductCell {
-              let product = products[indexPath.row]
+            let product = products[indexPath.row]
             itemCell.setProductData(product: product)
+            itemCell.goToSinglePageAction = { [weak self] in
+                self?.productDidTap?(product)
+            }
             return itemCell
-            
         }
         return UICollectionViewCell()
     }
 }
 
-//extension ProductCollectionView: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = (UIScreen.main.bounds.width - 32.0 - 21.0 - 6.0) / 2
-//        let height = (width / 161) * 200
-//        return CGSize(width: width, height: height)
-//    }
-//}
+extension ProductCollectionView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width - 32.0) 
+        let height = (width / 161) * 200
+        return CGSize(width: width, height: height)
+    }
+}
