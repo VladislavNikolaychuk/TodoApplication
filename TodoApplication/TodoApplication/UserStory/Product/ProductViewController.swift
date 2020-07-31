@@ -8,7 +8,6 @@
 
 import UIKit
 import Cosmos
-import TinyConstraints
 
 class ProductViewController: BaseController, ProductViewProtocol {
  
@@ -76,7 +75,7 @@ class ProductViewController: BaseController, ProductViewProtocol {
         showLoader()
         textViewType()
         rateView.addSubview(cosmosView)
-        cosmosView.centerInSuperview()
+//        cosmosView.centerInSuperview()
         presenter?.viewDidLoad()
         navigationItem.title = productName.text
         reviewCollectionView.register(UINib(nibName: "ReviewCell", bundle: nil),

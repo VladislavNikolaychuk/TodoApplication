@@ -56,23 +56,26 @@
                     <rect key="frame" x="0.0" y="179" width="414" height="150"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-4U-Cxh">
-                            <rect key="frame" x="0.0" y="5" width="414" height="44"/>
+                            <rect key="frame" x="82" y="5" width="250" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="Xhw-KR-Ye4"/>
                             </constraints>
                         </view>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhx-b4-Aub">
-                            <rect key="frame" x="24" y="54" width="340" height="96"/>
+                            <rect key="frame" x="24" y="54" width="301" height="96"/>
                             <color key="backgroundColor" name="backgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="96" id="dnf-Lw-3mb"/>
+                            </constraints>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epw-OH-Zcz">
-                            <rect key="frame" x="378" y="96" width="22" height="12"/>
+                            <rect key="frame" x="340" y="77" width="50" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" image="message.fill" catalog="system"/>
+                            <state key="normal" image="send_icon"/>
                             <connections>
                                 <action selector="sendCommentAction:" destination="-1" eventType="touchUpInside" id="Nb5-uX-1Rx"/>
                             </connections>
@@ -80,16 +83,16 @@
                     </subviews>
                     <color key="backgroundColor" name="backgroundColor"/>
                     <constraints>
-                        <constraint firstItem="epw-OH-Zcz" firstAttribute="top" secondItem="hhx-b4-Aub" secondAttribute="top" constant="42" id="0Ua-SO-aXe"/>
-                        <constraint firstItem="epw-OH-Zcz" firstAttribute="centerY" secondItem="hhx-b4-Aub" secondAttribute="centerY" id="4dM-NH-AbX"/>
-                        <constraint firstAttribute="trailing" secondItem="epw-OH-Zcz" secondAttribute="trailing" constant="14" id="7hj-pn-Q2s"/>
+                        <constraint firstAttribute="trailing" secondItem="epw-OH-Zcz" secondAttribute="trailing" constant="24" id="7hj-pn-Q2s"/>
                         <constraint firstAttribute="height" constant="150" id="8XS-Rk-gTl"/>
                         <constraint firstItem="YTE-4U-Cxh" firstAttribute="top" secondItem="kvU-wg-hBp" secondAttribute="top" constant="5" id="BX4-cz-862"/>
+                        <constraint firstItem="YTE-4U-Cxh" firstAttribute="centerX" secondItem="kvU-wg-hBp" secondAttribute="centerX" id="D67-3F-8L7"/>
+                        <constraint firstItem="epw-OH-Zcz" firstAttribute="centerY" secondItem="hhx-b4-Aub" secondAttribute="centerY" id="KC4-gr-ZgL"/>
                         <constraint firstAttribute="bottom" secondItem="hhx-b4-Aub" secondAttribute="bottom" id="MZi-FP-51d"/>
+                        <constraint firstItem="YTE-4U-Cxh" firstAttribute="leading" secondItem="kvU-wg-hBp" secondAttribute="leading" constant="82" id="RRv-Qb-WRk"/>
                         <constraint firstItem="hhx-b4-Aub" firstAttribute="leading" secondItem="kvU-wg-hBp" secondAttribute="leading" constant="24" id="Tor-DL-F1H"/>
-                        <constraint firstAttribute="trailing" secondItem="YTE-4U-Cxh" secondAttribute="trailing" id="bn1-Nr-Vhu"/>
-                        <constraint firstItem="epw-OH-Zcz" firstAttribute="leading" secondItem="hhx-b4-Aub" secondAttribute="trailing" constant="14" id="ewH-rg-MuB"/>
-                        <constraint firstItem="YTE-4U-Cxh" firstAttribute="leading" secondItem="kvU-wg-hBp" secondAttribute="leading" id="qbE-RX-JVc"/>
+                        <constraint firstAttribute="trailing" secondItem="YTE-4U-Cxh" secondAttribute="trailing" constant="82" id="eSo-Sk-Wam"/>
+                        <constraint firstItem="epw-OH-Zcz" firstAttribute="leading" secondItem="hhx-b4-Aub" secondAttribute="trailing" constant="15" id="uHX-Xy-qD5"/>
                         <constraint firstItem="hhx-b4-Aub" firstAttribute="top" secondItem="YTE-4U-Cxh" secondAttribute="bottom" constant="5" id="xQj-km-BMo"/>
                     </constraints>
                 </view>
@@ -138,7 +141,7 @@
         </view>
     </objects>
     <resources>
-        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="send_icon" width="50" height="50"/>
         <namedColor name="TitleLabel">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
