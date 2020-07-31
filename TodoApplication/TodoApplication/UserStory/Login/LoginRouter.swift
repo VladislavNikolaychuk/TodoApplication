@@ -10,6 +10,16 @@ import UIKit
 
 class LoginRouter: LoginRouterProtocol {
     
+    func navigateToProductController(from view: LoginViewProtocol) {
+        guard let viewController = view as? UIViewController else {
+            return
+        }
+        let productsController = ProductsConfigurator.create()
+        viewController.navigationController?.pushViewController(productsController,
+                                                                animated: true)
+    }
+    
+    
     func navigateToMainApp() {
         DispatchQueue.main.async {
             AppRouter.runMainFlow()
@@ -24,5 +34,7 @@ class LoginRouter: LoginRouterProtocol {
         viewController.navigationController?.pushViewController(signUpController,
                                                                 animated: true)
     }
+    
+
     
 }

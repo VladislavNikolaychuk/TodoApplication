@@ -33,3 +33,10 @@
 "logout" = "Logout";
 "saved" = "Saved";
 "products" = "Products";
+"doYouWantMessage" = "Do you want to login?";
+"alertDescription" = "Only logged in you can leave your comment";
+"goToLogin" = "Go to Login";
+"send" = "Send";
+"typeHere" = "Type here";
+"commentSent" = "Comment sent successfully";
+"invalidateCommentField" = "invalidateCommentField";

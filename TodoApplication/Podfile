@@ -9,6 +9,8 @@ target 'TodoApplication' do
     pod 'SnapKit', '~> 5.0.0'
     pod 'SimpleKeychain', '~> 0.9'
     pod 'Kingfisher'
+    pod 'Cosmos', '~> 17.0.0'
+    pod 'TinyConstraints', '~> 3.2.1'
 
   end
 

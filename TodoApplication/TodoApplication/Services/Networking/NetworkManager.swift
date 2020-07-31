@@ -13,12 +13,15 @@ struct NetworkManager {
     
     var globalHeaders: HTTPHeaders? {
         let token = AuthManager.shared.token()
-        return [
-            "Authorization": "Bearer \(token)",
+        var options: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
+        if token != "" {
+            options["Authorization"] = "token \(token)"
+        }
+        return options
     }
-    
+        
     private func handleResponse<T: Decodable>(result: Result<String>,
                                               responseData: Data,
                                               responseType: T.Type,
@@ -51,6 +54,7 @@ struct NetworkManager {
             completion(nil, Text.smthWentWrong.localized)
             return
         }
+        print("globalHeaders \(globalHeaders) \(url) \(endPoint.httpMethod)")
         AF.request(url,
                    method: endPoint.httpMethod,
                    parameters: endPoint.options ?? [:],

@@ -11,10 +11,15 @@ import UIKit
 final class AppRouter {
     
     static func runOnLoadFlow() {
-        AppRouter.runAuthFlow()
+        if AuthManager.shared.token() != "" {
+            AppRouter.runMainFlow()
+        } else {
+            AppRouter.runAuthFlow()
+        }
     }
     
     static func runAuthFlow() {
+        UserTypeService.shared.type = .anonymus
         AuthManager.shared.logout()
         let mainController = LoginConfigurator.createLoginRouterModule()
         let navigation = UINavigationController(rootViewController: mainController)
@@ -22,6 +27,7 @@ final class AppRouter {
     }
     
     static func runMainFlow() {
+        UserTypeService.shared.type = .authorized
         let mainController = ProductsConfigurator.create()
         let navigation = UINavigationController(rootViewController: mainController)
         changeFlowTo(controller: navigation)

@@ -12,8 +12,6 @@ import Alamofire
 enum AuthEndpoint {
     case login(username: String, password: String)
     case signUp(username: String, password: String)
-    case getProducts
-    case getReviews
 }
 
 extension AuthEndpoint: EndPointType {
@@ -29,10 +27,6 @@ extension AuthEndpoint: EndPointType {
             return "login/"
         case .signUp:
             return "register/"
-        case .getProducts:
-            return "products/"
-        case .getReviews:
-            return "reviews/1"
         }
     }
     
@@ -42,10 +36,6 @@ extension AuthEndpoint: EndPointType {
             return .post
         case .signUp:
             return .post
-        case .getProducts:
-            return .get
-        case .getReviews:
-            return .get
         }
     }
     
@@ -64,10 +54,6 @@ extension AuthEndpoint: EndPointType {
                 "password": password
             ]
             return options
-        case .getProducts:
-            return nil
-        case .getReviews:
-            return nil
         }
     }
     
@@ -77,10 +63,6 @@ extension AuthEndpoint: EndPointType {
             return JSONEncoding.default
         case .signUp:
             return JSONEncoding.default
-        case .getProducts:
-            return URLEncoding.default
-        case .getReviews:
-            return URLEncoding.default
         }
     }
     //swiftlint:enable pattern_matching_keywords

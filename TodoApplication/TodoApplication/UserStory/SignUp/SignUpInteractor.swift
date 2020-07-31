@@ -16,6 +16,7 @@ class SignUpInteractor: SignUpInteractorInputProtocol {
     func signUpWith(userName: String, password: String) {
         let request = AuthEndpoint.signUp(username: userName, password: password)
         networkManager.fetch(endPoint: request, responseType: AuthResponse.self) { (result, error) in
+            print("dwqwe \(result) \(error)")
             if let authCredentials = result,
                 AuthManager.shared.saveCredentials(authCredentials.token) {
                 self.presenter?.signUpProccessSuccess()

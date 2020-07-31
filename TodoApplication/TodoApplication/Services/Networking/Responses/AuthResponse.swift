@@ -15,5 +15,5 @@ class AuthResponse: Decodable {
 
 class DefaultFailResponse: Decodable {
     let success: Bool
-    let message: String
+    let message: String?
 }

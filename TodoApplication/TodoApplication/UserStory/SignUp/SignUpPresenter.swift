@@ -51,7 +51,7 @@ class SignUpPresenter: SignUpPresenterProtocol {
 }
 
 extension SignUpPresenter: SignUpInteractorOutputProtocol {
-    
+
     func signUpProccessSuccess() {
         router?.navigateToMainApp()
     }

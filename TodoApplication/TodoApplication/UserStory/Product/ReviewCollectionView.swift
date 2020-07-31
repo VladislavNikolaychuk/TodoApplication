@@ -37,7 +37,7 @@ extension ReviewCollectionView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (UIScreen.main.bounds.width - 32.0)
-        let height = (width / 161) * 100
+        let height = (width / 161) * 70
         return CGSize(width: width, height: height)
     }
 }

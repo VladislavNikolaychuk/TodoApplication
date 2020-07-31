@@ -49,10 +49,23 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YEg-Cw-BUg">
-                    <rect key="frame" x="24" y="722" width="366" height="120"/>
+                    <rect key="frame" x="24" y="662" width="366" height="180"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-01-KMK">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agl-IH-HuI">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="ygJ-pw-RM0"/>
+                            </constraints>
+                            <state key="normal" title="SHOW PRODUCTS">
+                                <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="KLd-Kx-QAU"/>
+                                <action selector="showProductsAction:" destination="-1" eventType="touchUpInside" id="7ZM-ca-MIm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-01-KMK">
+                            <rect key="frame" x="0.0" y="60" width="366" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="WqI-sK-TDs"/>
                             </constraints>
@@ -64,7 +77,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eL-Uk-ldq">
-                            <rect key="frame" x="0.0" y="60" width="366" height="60"/>
+                            <rect key="frame" x="0.0" y="120" width="366" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="f3U-44-mHk"/>
                             </constraints>
@@ -98,7 +111,7 @@
     </objects>
     <resources>
         <namedColor name="backgroundColor">
-            <color red="0.070588235289999995" green="0.078431372550000003" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.071000002324581146" green="0.078000001609325409" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

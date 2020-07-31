@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270365FC24D3EFCE00A39048 /* UserTypeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270365FB24D3EFCE00A39048 /* UserTypeService.swift */; };
+		270365FE24D417FB00A39048 /* ProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270365FD24D417FB00A39048 /* ProductsEndpoint.swift */; };
+		2703660024D4315800A39048 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270365FF24D4315800A39048 /* UITextView+Extension.swift */; };
 		2706715024D17E74009C96C8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706714F24D17E74009C96C8 /* Product.swift */; };
 		2706715524D18D5F009C96C8 /* ProductCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706715424D18D5F009C96C8 /* ProductCollectionView.swift */; };
 		2706715E24D19381009C96C8 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706715D24D19381009C96C8 /* Segue.swift */; };
@@ -70,6 +73,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270365FB24D3EFCE00A39048 /* UserTypeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypeService.swift; sourceTree = "<group>"; };
+		270365FD24D417FB00A39048 /* ProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndpoint.swift; sourceTree = "<group>"; };
+		270365FF24D4315800A39048 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		2706714F24D17E74009C96C8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2706715424D18D5F009C96C8 /* ProductCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionView.swift; sourceTree = "<group>"; };
 		2706715D24D19381009C96C8 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 				2706714F24D17E74009C96C8 /* Product.swift */,
 				27D824D324D2E0F700C6AB61 /* Review.swift */,
 				27D824D524D2E66C00C6AB61 /* UserData.swift */,
+				270365FB24D3EFCE00A39048 /* UserTypeService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 			children = (
 				270E2C3624CEE8840065A400 /* UITextField+Extensions.swift */,
 				27D824D124D2B23A00C6AB61 /* UIImageView+Extensions.swift */,
+				270365FF24D4315800A39048 /* UITextView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +333,7 @@
 			children = (
 				272F3CCB24CAF2DF00189DDE /* AuthManager.swift */,
 				270E2C2424CEE0100065A400 /* AuthEndPoint.swift */,
+				270365FD24D417FB00A39048 /* ProductsEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -540,6 +549,7 @@
 				27A998E224D05DCB005E3C8F /* ProductsViewController.swift in Sources */,
 				270E2C2524CEE0100065A400 /* AuthEndPoint.swift in Sources */,
 				27A998DF24D05DB5005E3C8F /* ProductsConfigurator.swift in Sources */,
+				270365FC24D3EFCE00A39048 /* UserTypeService.swift in Sources */,
 				272F3CD324CAF40700189DDE /* Configurations.swift in Sources */,
 				27A998DB24D05D8C005E3C8F /* ProductsProtocols.swift in Sources */,
 				27D824D624D2E66C00C6AB61 /* UserData.swift in Sources */,
@@ -552,11 +562,13 @@
 				270E2C4E24CF0C060065A400 /* LoginRouter.swift in Sources */,
 				272F3C9224CAF0A000189DDE /* AppDelegate.swift in Sources */,
 				27A998D924D05D73005E3C8F /* ProductsPresenter.swift in Sources */,
+				270365FE24D417FB00A39048 /* ProductsEndpoint.swift in Sources */,
 				270E2C0C24CECE780065A400 /* BaseController.swift in Sources */,
 				270E2C5624CF130D0065A400 /* LoginConfigurator.swift in Sources */,
 				270E2C1824CEDC200065A400 /* SignUpPresenter.swift in Sources */,
 				2706716F24D1B9DC009C96C8 /* ProductConfigurator.swift in Sources */,
 				2706716824D1B9A8009C96C8 /* ProductViewController.swift in Sources */,
+				2703660024D4315800A39048 /* UITextView+Extension.swift in Sources */,
 				270E2C2D24CEE4630065A400 /* NetworkSettingsManager.swift in Sources */,
 				270E2C1A24CEDC7D0065A400 /* SignUpInteractor.swift in Sources */,
 				270E2C2B24CEE2420065A400 /* Validator.swift in Sources */,

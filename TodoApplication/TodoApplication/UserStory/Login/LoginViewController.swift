@@ -21,6 +21,10 @@ final class LoginViewController: BaseController {
         navigationItem.title = Text.login.localized
     }
     
+    @IBAction func showProductsAction(_ sender: Any) {
+        presenter?.navigateToProductsViewController()
+    }
+    
     @IBAction func loginAction(_ sender: Any) {
         showLoader()
         presenter?.loginWith(userName: loginField.text ?? "",

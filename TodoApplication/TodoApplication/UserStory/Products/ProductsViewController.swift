@@ -12,6 +12,7 @@ class ProductsViewController: BaseController, ProductsViewProtocol {
     
     @IBOutlet weak var alert: UILabel!
     @IBOutlet weak var productsCollectionView: ProductCollectionView!
+    @IBOutlet weak var logoutLogin: UIButton!
     var presenter: ProductsPresenterProtocol?
     
     func showAlert(with message: String) {
@@ -39,7 +40,34 @@ class ProductsViewController: BaseController, ProductsViewProtocol {
         }
         
     }
+    
     @IBAction func logoutAction(_ sender: Any) {
+        presenter?.tappedLoginLogoutButton()
+    }
+    
+    
+    func setToAnonymusMode() {
+        let alert = UIAlertController(title: Text.doYouWantMessage.localized, message: Text.alertDescription.localized,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Text.goToLogin.localized, style: UIAlertAction.Style.default,
+                                      handler: { _ in
+                                        AppRouter.runAuthFlow()
+        }))
+        alert.addAction(UIAlertAction(title: Text.cancel.localized, style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func setToAuthorizedMode() {
         AppRouter.runAuthFlow()
     }
+    
+    func setLogoutImage() {
+        logoutLogin.setImage(UIImage(named:"logout_icon"), for: .normal)
+        
+    }
+    
+    func setLoginImage() {
+        logoutLogin.setImage(UIImage(named: "login_icon"), for: .normal)
+    }
+    
 }

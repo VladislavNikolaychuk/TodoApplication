@@ -15,6 +15,10 @@ protocol ProductsViewProtocol: class {
     // PRESENTER -> VIEW
     func showAlert(with message: String)
     func showProductsList(_ list: [Product])
+    func setToAnonymusMode()
+    func setToAuthorizedMode()
+    func setLogoutImage()
+    func setLoginImage()
 }
 
 
@@ -28,6 +32,7 @@ protocol ProductsPresenterProtocol: class {
     // VIEW -> PRESENTER
     func viewDidLoad()
     func navigateToProductPreview(product: Product)
+    func tappedLoginLogoutButton()
 }
 
 protocol ProductsInteractorInputProtocol: class {

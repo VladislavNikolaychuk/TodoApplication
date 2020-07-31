@@ -16,14 +16,27 @@ class ProductsPresenter: ProductsPresenterProtocol {
     var products: [Product] = []
     
     func viewDidLoad() {
+        if UserTypeService.shared.type == .authorized {
+            view?.setLogoutImage()
+        } else if UserTypeService.shared.type == .anonymus {
+            view?.setLoginImage()
+        }
         interactor?.fetchProducts()
     }
     
+    func tappedLoginLogoutButton() {
+        if UserTypeService.shared.type == .authorized {
+            view?.setToAuthorizedMode()
+        } else if UserTypeService.shared.type == .anonymus {
+            view?.setToAnonymusMode()
+        }
+    }
+    
     func navigateToProductPreview(product: Product) {
+        
         guard let view = view else { return }
         router?.openProductModule(from: view, product: product)
     }
-    
 }
 
 extension ProductsPresenter: ProductsInteractorOutputProtocol {

@@ -30,6 +30,13 @@ class LoginPresenter: LoginPresenterProtocol {
         router?.navigateToSignUpViewController(from: view)
     }
     
+    func navigateToProductsViewController() {
+        guard let view = view else {
+            return
+        }
+        router?.navigateToProductController(from: view)
+    }
+    
     private func validateForm(userName: String, password: String) -> (isValid: Bool, error: String?) {
         var result: (isValid: Bool, error: String?) = (isValid: false, error: nil)
         let isUserValid = userName != ""
@@ -48,7 +55,6 @@ class LoginPresenter: LoginPresenterProtocol {
         result.isValid = isUserValid && isPasswordValid
         return result
     }
-    
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {

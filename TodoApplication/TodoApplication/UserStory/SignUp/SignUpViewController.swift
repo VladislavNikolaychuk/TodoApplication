@@ -19,6 +19,7 @@ class SignUpViewController: BaseController {
         super.viewDidLoad()
         navigationItem.title = Text.signUp.localized
     }
+    
     @IBAction func signUpAction(_ sender: Any) {
         showLoader()
         presenter?.signUpWith(userName: loginField.text ?? "",
@@ -33,7 +34,6 @@ class SignUpViewController: BaseController {
     
 }
 extension SignUpViewController: SignUpViewProtocol {
-    
     func showAlert(with message: String) {
         hideLoader()
         alert.text = message

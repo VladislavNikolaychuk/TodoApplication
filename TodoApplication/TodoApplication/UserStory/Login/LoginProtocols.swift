@@ -27,6 +27,7 @@ protocol LoginPresenterProtocol: class {
     // VIEW -> PRESENTER
     func loginWith(userName: String, password: String)
     func navigateToSignUpViewController()
+    func navigateToProductsViewController()
 }
 
 protocol LoginInteractorInputProtocol: class {
@@ -49,4 +50,5 @@ protocol LoginRouterProtocol: class {
     // PRESENTER -> ROUTER
     func navigateToSignUpViewController(from view: LoginViewProtocol)
     func navigateToMainApp()
+    func navigateToProductController(from view: LoginViewProtocol)
 }

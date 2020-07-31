@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="TodoApplication" customModuleProvider="target">
             <connections>
                 <outlet property="alert" destination="anu-wJ-jUs" id="f4a-rc-PYX"/>
+                <outlet property="logoutLogin" destination="1r1-Qv-snW" id="BGP-RU-dHz"/>
                 <outlet property="productsCollectionView" destination="aef-Du-a4q" id="dGa-Fn-QIg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -67,7 +68,7 @@
     <resources>
         <image name="logout_icon" width="25" height="25"/>
         <namedColor name="backgroundColor">
-            <color red="0.070588235289999995" green="0.078431372550000003" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.071000002324581146" green="0.078000001609325409" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

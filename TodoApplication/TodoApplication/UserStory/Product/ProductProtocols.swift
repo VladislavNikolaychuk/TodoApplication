@@ -16,6 +16,7 @@ protocol ProductViewProtocol: class {
     func showAlert(with message: String)
     func showProduct(_ product: Product)
     func showReviewsList(_ list: [Review])
+    func hideLoader()
 }
 
 
@@ -26,9 +27,12 @@ protocol ProductPresenterProtocol: class {
     var router: ProductRouterProtocol? { get set }
     var product: Product { get set }
     
+    func sendReview(rate: Int, comment: String)
+    
     // VIEW -> PRESENTER
     func viewDidLoad()
     func navigateToProductPreview()
+    func isRaviewsAvailable() -> Bool
 }
 
 protocol ProductInteractorInputProtocol: class {
@@ -36,7 +40,8 @@ protocol ProductInteractorInputProtocol: class {
     var presenter: ProductInteractorOutputProtocol? { get set }
     
     // PRESENTER -> INTERACTOR
-    func fetchReviews()
+    func fetchReviews(ID: Int)
+    func sendReview(productID: Int, rate: Int, comment: String)
 }
 
 protocol ProductInteractorOutputProtocol: class {
@@ -44,6 +49,8 @@ protocol ProductInteractorOutputProtocol: class {
     // INTERACTOR -> PRESENTER
     func fetchReviewsList(_ list: [Review])
     func fetchReviewsListFail(_ message: String)
+    func createReviewSuccesed()
+    func createReviewFailed(_ message: String)
 }
 
 protocol ProductRouterProtocol: class {

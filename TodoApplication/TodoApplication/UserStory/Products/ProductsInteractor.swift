@@ -14,7 +14,7 @@ class ProductsInteractor: ProductsInteractorInputProtocol {
     var presenter: ProductsInteractorOutputProtocol?
     
     func fetchProducts() {
-        let request = AuthEndpoint.getProducts
+        let request = ProductsEndpoint.getProducts
         networkManager.fetch(endPoint: request, responseType: [Product].self) { (result, error) in
             if let result = result {
                 self.presenter?.fetchProductList(result)

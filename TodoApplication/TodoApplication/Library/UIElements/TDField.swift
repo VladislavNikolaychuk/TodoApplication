@@ -39,8 +39,7 @@ final class TDField: UITextField, Validable {
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 8.0
         self.borderStyle = .roundedRect
-        self.backgroundColor = Colors.darkColor.withAlphaComponent(0.25)
-        self.textColor = Colors.white
+        self.textColor = Colors.darkColor
         self.addCancelToolbar()
     }
     
